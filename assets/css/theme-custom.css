@@ -1,0 +1,171 @@
+.it-main-menu nav ul li > .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 260px;
+  text-align: left;
+  padding: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  transition-duration: 0.1s;
+  transform-origin: top;
+  -webkit-transform: perspective(300px) rotateX(-18deg);
+  -moz-transform: perspective(300px) rotateX(-18deg);
+  -ms-transform: perspective(300px) rotateX(-18deg);
+  -o-transform: perspective(300px) rotateX(-18deg);
+  transform: perspective(300px) rotateX(-18deg);
+  border-top: 4px solid var(--it-theme-1);
+  background-color: var(--it-common-white);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 9999;
+}
+
+.it-main-menu nav ul li:hover > .sub-menu,
+.it-main-menu nav ul li:focus-within > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 0.2s;
+  -webkit-transform: perspective(300px) rotateX(0deg);
+  -moz-transform: perspective(300px) rotateX(0deg);
+  -ms-transform: perspective(300px) rotateX(0deg);
+  -o-transform: perspective(300px) rotateX(0deg);
+  transform: perspective(300px) rotateX(0deg);
+}
+
+.it-main-menu nav ul li > .sub-menu li a {
+  display: inline-block;
+  padding: 0;
+  color: var(--it-common-black);
+  transition: 0.3s;
+  position: relative;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+.it-main-menu nav ul li > .sub-menu li a:hover {
+  padding-left: 25px;
+}
+
+.it-main-menu nav ul li > .sub-menu li a::before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 0px;
+  background-color: var(--it-theme-1);
+  display: inline-block;
+  transition: all 0.3s ease-out 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.it-main-menu nav ul li > .sub-menu li a:hover::before {
+  width: 20px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.it-header-main-menu.it-main-menu ul.menu {
+  margin: 0;
+}
+
+button.it-menu-bar {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.it-header-style-2 .it-header-button button {
+  background: inherit;
+}
+
+.it-header-style-2 .it-header-shop > button {
+  line-height: 34px;
+}
+
+button.it-menu-bar i.dashicons {
+  height: auto;
+  width: auto;
+  line-height: inherit;
+}
+
+.it-menu-mobile .it-submenu {
+  display: none;
+}
+.it-menu-mobile ul.menu {
+  margin-left: 0;
+}
+
+.it-menu-mobile ul li.menu-item-has-children > a .dropdown-toggle-btn {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  transform: translateY(-2px);
+  font-size: 18px;
+  color: #fff;
+  font-family: "Font Awesome 5 Pro";
+  transition: 0.3s all;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  line-height: 22px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: inherit;
+}
+
+.it-menu-mobile
+  ul
+  li.menu-item-has-children
+  > a
+  .dropdown-toggle-btn.dropdown-opened
+  i {
+  transform: rotate(90deg);
+  transition: 0.3s all;
+}
+
+.it-menu-mobile ul.sub-menu {
+  display: none;
+}
+
+button.dropdown-toggle-btn i {
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.it-offcanvas-area button.close-btn {
+  background: inherit;
+  border: inherit;
+  color: #fff;
+}
+
+.it-offcanvas-area button.close-btn:focus,
+button.dropdown-toggle-btn:focus {
+  outline: 1px dotted #fff;
+}
+
+.copywrite_write_area {
+  background-color: #f1f3fd;
+  padding: 22px 0;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+.ml-40 {
+  margin-left: 40px;
+}
+
+.widget-area .widget {
+  padding: 40px;
+  background-color: #f1f3fd;
+  border-radius: 5px;
+}
