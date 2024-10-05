@@ -1313,7 +1313,7 @@ input[type="color"] {
 }
 .it-breadcrumb-list span.dvdr,
 .it-breadcrumb-list i.dvdr {
-  margin: 0 17px;
+  margin: 0 5px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px),
   only screen and (min-width: 992px) and (max-width: 1199px),
@@ -4932,11 +4932,11 @@ table th {
   }
 }
 .postbox-meta span i {
-  transform: translateY(2px);
-  color: #00102f;
-  margin-right: 10px;
-  font-size: 16px;
-  display: inline-block;
+    transform: translateY(2px);
+    color: #00102f;
+    margin-right: 10px;
+    font-size: 18px;
+    display: inline-block;
 }
 .postbox-meta span:hover {
   color: var(--it-theme-1);

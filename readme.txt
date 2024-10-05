@@ -14,7 +14,7 @@ A starter theme called Medito Starter.
 
 == Description ==
 
-Medito - University, Online Courses, School & Meditoon WordPress Theme
+Medito Starter - Health & Medical WooCommerce WordPress Theme
 
 == Installation ==
 
@@ -26,11 +26,27 @@ Medito - University, Online Courses, School & Meditoon WordPress Theme
 
 = Does this theme support any plugins? =
 
-Medito Starter includes support for WooCommerce and Elementor.
+== Copyright ==
+
+This theme, like WordPress, is distributed under the terms of GPL.
+
+Medito Starter bundles the following third-party resources:
+
+Use Dashicons
+License: GPL 2.0
+Source: https://developer.wordpress.org/resource/dashicons/
+
+Bootstrap CSS & JS
+License: MIT License
+Source: https://icons.getbootstrap.com/
+
+Image for theme screenshot, Copyright Jason Blackeye
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/4B83RD7BV9
 
 == Changelog ==
 
-= 1.0.0 - October 02 2024 =
+= 1.0.0 - October 05 2024 =
 * Initial release
 
 == Credits ==

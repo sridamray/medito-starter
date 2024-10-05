@@ -10,43 +10,41 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<div class="search-page section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-8 col-lg-8">
+					<div class="single-post-area">
+							<?php
+								while ( have_posts() ) :
+									the_post();
 
-		<?php if ( have_posts() ) : ?>
+									get_template_part( 'template-parts/content', get_post_type() );
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'medito-starter' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+									the_post_navigation(
+										array(
+											'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'medito-starter' ) . '</span> <span class="nav-title">%title</span>',
+											'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'medito-starter' ) . '</span> <span class="nav-title">%title</span>',
+										)
+									);
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+									// If comments are open or we have at least one comment, load up the comment template.
+									if ( comments_open() || get_comments_number() ) :
+										comments_template();
+									endif;
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
+								endwhile; // End of the loop.
+							?>
+										</div>
+				</div>
+				<div class="col-xl-4 col-lg-4">
+					<div class="sidebar ml-40">
+						<?php get_sidebar();?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php
 get_sidebar();

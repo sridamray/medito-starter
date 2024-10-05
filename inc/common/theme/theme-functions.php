@@ -26,3 +26,27 @@ function medito_starter_header_menu() {
 		)
 	);
 }
+
+
+// Start the session
+function medito_starter_start_session() {
+    if (!session_id()) {
+        session_start();
+    }
+}
+add_action('init', 'medito_starter_start_session');
+
+// Get post view count
+function medito_starter_get_post_view_count($post_id) {
+    $count = get_post_meta($post_id, 'post_view_count', true);
+    return empty($count) ? 0 : $count;
+}
+
+// Set post view count
+function medito_starter_set_post_view_count($post_id) {
+    $count = medito_starter_get_post_view_count($post_id);
+    $count++;
+    update_post_meta($post_id, 'post_view_count', $count);
+}
+
+

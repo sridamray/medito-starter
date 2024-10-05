@@ -18,13 +18,6 @@ get_header();
 					<div class="col-lg-8 col-xl-8">
 						<?php if ( have_posts() ) : ?>
 
-							<header class="page-header">
-								<?php
-								the_archive_title( '<h1 class="page-title">', '</h1>' );
-								the_archive_description( '<div class="archive-description">', '</div>' );
-								?>
-							</header><!-- .page-header -->
-
 							<?php
 							/* Start the Loop */
 							while ( have_posts() ) :
@@ -49,7 +42,7 @@ get_header();
 						?>
 					</div>
 					<div class="col-xl-4 col-lg-4">
-						<div class="common-sidebar ml-40">
+						<div class="sidebar ml-40">
 							<?php get_sidebar();?>
 						</div>
 					</div>

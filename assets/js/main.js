@@ -1,5 +1,13 @@
 (function ($) {
   ("use strict");
+
+   $(window).on("load", function () {
+    $("#preloader").delay(350).fadeOut("slow");
+
+    $("body").delay(350).css({ overflow: "visible" });
+  });
+
+
   // 09. Sidebar Js
   // When clicked or focused, add the class
   $(".it-menu-bar").on("click focus", function () {

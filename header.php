@@ -22,6 +22,15 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+      <!-- preloader -->
+      <div id="preloader">
+         <div class="preloader">
+            <span></span>
+            <span></span>
+         </div>
+      </div>
+      <!-- preloader end  -->
+
 
 <!-- back-to-top-start  -->
       <button class="scroll-top scroll-to-target" data-target="html">

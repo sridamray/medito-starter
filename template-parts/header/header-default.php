@@ -89,10 +89,10 @@
                                  // Display buttons
                                  echo '<div class="cart-btn">';
                                  echo '<a class="it-btn-theme w-100 d-flex justify-content-center mb-10" href="' . wc_get_cart_url() . '">';
-                                 echo '<span class="btn-wrap"><span class="text-one">' . esc_html__('Shopping Cart', 'medito-starter') . '</span><span class="text-two">' . esc_html__('Shopping Cart', 'medito') . '</span></span>';
+                                 echo '<span class="btn-wrap"><span class="text-one">' . esc_html__('Shopping Cart', 'medito-starter') . '</span><span class="text-two">' . esc_html__('Shopping Cart', 'medito-starter') . '</span></span>';
                                  echo '</a>';
                                  echo '<a class="it-btn-theme black-bg d-flex justify-content-center w-100" href="' . wc_get_checkout_url() . '">';
-                                 echo '<span class="btn-wrap"><span class="text-one">' . esc_html__('Checkout', 'medito-starter') . '</span><span class="text-two">' . esc_html__('Checkout', 'medito') . '</span></span>';
+                                 echo '<span class="btn-wrap"><span class="text-one">' . esc_html__('Checkout', 'medito-starter') . '</span><span class="text-two">' . esc_html__('Checkout', 'medito-starter') . '</span></span>';
                                  echo '</a>';
                                  echo '</div>';
                               } else {

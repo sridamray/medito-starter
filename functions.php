@@ -7,10 +7,7 @@
  * @package Medito_Starter
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
-}
+
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -170,12 +167,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
-/**
- * Load WooCommerce compatibility file.
- */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
+
 
 function medito_starter_register_block_styles() {
     register_block_style(

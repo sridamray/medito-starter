@@ -1,3 +1,36 @@
+/*Common CSS*/
+
+.section-padding {
+  padding: 80px 0;
+}
+.ml-40 {
+  margin-left: 40px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+
+.mb-35{
+  margin-bottom: 35px;
+}
+.mt-15{
+  margin-top: 15px;
+}
+.mb-30{
+  margin-bottom: 30px;
+}
+.mb-80{
+  margin-bottom: 80px;
+}
+.mr-40{
+  margin-right: 40px;
+}
+.mb-15{
+  margin-bottom: 15px;
+}
+
+/*Menu css*/
+
 .it-main-menu nav ul li > .sub-menu {
   position: absolute;
   top: 100%;
@@ -157,15 +190,52 @@ button.dropdown-toggle-btn:focus {
   padding: 22px 0;
 }
 
-.section-padding {
-  padding: 80px 0;
-}
-.ml-40 {
-  margin-left: 40px;
-}
+
 
 .widget-area .widget {
   padding: 40px;
   background-color: #f1f3fd;
   border-radius: 5px;
 }
+
+.cart-btn .it-btn-theme {
+    margin-bottom: 10px;
+}
+
+/*Sidebar Css*/
+
+.sidebar ul {
+    margin-left: 0;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    font-size: 18px;
+}
+
+.sidebar ol {
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin: 9px 0;
+}
+
+.sidebar ul.children {
+    padding-left: 15px;
+}
+.sidebar ul.sub-menu {
+    padding-left: 15px;
+}
+
+.it-btn-theme.white-bg:focus {
+    outline: 1px dotted var(--it-common-black);
+}
+
+
+/*Woocomemrce css*/
+
+.single-product-page .quantity input.qty {
+    height: 36px;
+}
+

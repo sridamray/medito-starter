@@ -9,7 +9,6 @@ function medito_starter_scripts() {
     wp_enqueue_style( 'medito-starter-main', get_template_directory_uri().'/assets/css/main.css', array() );
     wp_enqueue_style( 'medito-starter-custom', get_template_directory_uri().'/assets/css/theme-custom.css', array() );
 	wp_enqueue_style( 'medito-starter-style', get_stylesheet_uri(), array(), );
-	wp_style_add_data( 'medito-starter-style', 'rtl', 'replace' );
 
 
      wp_enqueue_style('dashicons');
@@ -20,12 +19,6 @@ function medito_starter_scripts() {
 	wp_enqueue_script( 'medito-starter-main', get_template_directory_uri() . '/assets/js/main.js',[ 'jquery' ],  '', true );
 	wp_enqueue_script( 'medito-starter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
 
-    
-    wp_enqueue_script( 'medito-starter-ajax', get_template_directory_uri() . '/assets/js/custom-ajax.js', array( 'jquery' ), '', true );
-
-    wp_localize_script( 'medito-starter-ajax', 'custom_ajax_init', array(
-        'ajaxurl' => admin_url( 'admin-ajax.php' )
-    ));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

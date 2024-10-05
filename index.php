@@ -12,15 +12,17 @@
  * @package Medito_Starter
  */
 
+$blog_column = is_active_sidebar( 'sidebar-1' ) ? 8 : 12;
+
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+
 
 	<div class="index-page section-padding">
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-8 col-lg-8">
+				<div class="col-xl-<?php echo esc_attr($blog_column, 'medito-starter');?> col-lg-<?php echo esc_attr($blog_column, 'medito-starter');?>">
 						<?php
 							if ( have_posts() ) :
 
@@ -54,16 +56,18 @@ get_header();
 							endif;
 							?>
 				</div>
+				<?php if ( is_active_sidebar( 'sidebar-1' ) ): ?>
 				<div class="col-xl-4 col-lg-4">
-						<div class="common-sidebar ml-40">
-							<?php get_sidebar();?>
-						</div>
+					<div class="sidebar ml-40">
+						<?php get_sidebar();?>
+					</div>
 				</div>
+				<?php endif;?>
 			</div>
 		</div>
 	</div>
 
-	</main><!-- #main -->
+
 
 <?php
 

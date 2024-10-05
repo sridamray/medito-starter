@@ -7,57 +7,70 @@
  * @package Medito_Starter
  */
 
-?>
+global $post;
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+if ( is_single() ) : ?>
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				medito_starter_posted_on();
-				medito_starter_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php medito_starter_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'medito-starter' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'medito-starter' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+<article id="post-<?php the_ID();?>" <?php post_class( 'postbox-item format-standard' );?>>
+	<h3 class="postbox-title mb-15"><?php the_title();?></h3>
+    <?php if ( has_post_thumbnail() ): ?>
+        <div class="postbox-thumb radius mb-35">
+           <?php the_post_thumbnail( 'full', ['class' => 'img-responsive'] );?>
+        </div>
+    <?php endif;?>
+        <?php get_template_part( 'template-parts/blog-meta' ); ?>
+    <div class="postbox-content mb-30">
+       <?php the_content();?>
+       <?php
+            wp_link_pages( [
+                'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'medito-starter' ),
+                'after'       => '</div>',
+                'link_before' => '<span class="page-number">',
+                'link_after'  => '</span>',
+            ] );
+        ?>
+    </div>
+    
+   
+   
+ </article>
 
-	<footer class="entry-footer">
-		<?php medito_starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<?php else: ?>
+
+   
+    <article  id="post-<?php the_ID();?>" <?php post_class( 'postbox-thumb-box mb-80 format-standard' );?>>
+        <?php if ( has_post_thumbnail() ): ?>
+            <div class="postbox-main-thumb mb-35">
+               <a href="<?php the_permalink();?>">
+                    <?php the_post_thumbnail( 'full', ['class' => 'img-responsive'] );?>
+                </a>
+            </div>
+        <?php endif;?>
+
+        <div class="postbox-content-box">
+            <?php get_template_part( 'template-parts/blog-meta' ); ?>
+           <h4 class="postbox-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+            <p class="mt-15 mb-30">
+                <?php echo wp_trim_words( get_the_content(), 30, '...'); ?>
+            </p>
+
+        
+            <a class="it-btn-theme mr-30" href="<?php the_permalink();?>">
+                <span class="btn-wrap">
+                    <span class="text-one">
+                    <?php echo esc_html__('Read More', 'medito-starter');?>
+                    </span>
+                    <span class="text-two">
+                     <?php echo esc_html__('Read More', 'medito-starter');?>
+                    </span>
+                </span>
+            </a>
+         
+        </div>
+    </article>
+
+
+<?php endif;?>
